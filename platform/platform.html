@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdsourcing Games</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="platform.css">
+</head>
+<body>
+    <div class="loader">
+        <svg><rect></rect></svg>
+    </div>
+
+    <section class="content">
+        <header>
+            <a href="#" class="logo"><img src="../img/user.png" alt="user"></a>
+            <div class="wifi"></div>
+        </header>
+
+        <div class="imgScroll">
+            <div>
+                <a href="https://fold.it/" target="_blank"><img src="../img/foldit-full.jpg" alt="img1"></a>
+                <a href="https://honkoku.org/" target="_blank"><img src="../img/みんなで翻刻.png" alt="img2"></a>
+                <a href="https://eyewire.org/explore" target="_blank"><img src="../img/Eyewire.png" alt="img3"></a>
+                <a href="https://stallcatchers.com/main" target="_blank"><img src="../img/stallcatchers.png" alt="img4"></a>
+                <a href="https://www.artigo.org/en" target="_blank"><img src="../img/ARTigo.png" alt="img5"></a>
+                <a href="https://phylo.cs.mcgill.ca/" target="_blank"><img src="../img/PHYLO.png" alt="img6"></a>
+                <a href="https://crowdsource.google.com/" target="_blank"><img src="../img/crowdsource.png" alt="img7"></a>
+                <a href="https://www.mozak.science/landing" target="_blank"><img src="../img/mozak.png" alt="img8"></a>
+                <a href="https://bee.questagame.com/#/?_k=izsl0a" target="_blank"><img src="../img/QuestaGame.png" alt="img9"></a>
+            </div>
+            <div>
+                <a href="https://fold.it/" target="_blank"><img src="../img/foldit-full.jpg" alt="img1"></a>
+                <a href="https://honkoku.org/" target="_blank"><img src="../img/みんなで翻刻.png" alt="img2"></a>
+                <a href="https://eyewire.org/explore" target="_blank"><img src="../img/Eyewire.png" alt="img3"></a>
+                <a href="https://stallcatchers.com/main" target="_blank"><img src="../img/stallcatchers.png" alt="img4"></a>
+                <a href="https://www.artigo.org/en" target="_blank"><img src="../img/ARTigo.png" alt="img5"></a>
+                <a href="https://phylo.cs.mcgill.ca/" target="_blank"><img src="../img/PHYLO.png" alt="img6"></a>
+                <a href="https://crowdsource.google.com/" target="_blank"><img src="../img/crowdsource.png" alt="img7"></a>
+                <a href="https://www.mozak.science/landing" target="_blank"><img src="../img/mozak.png" alt="img8"></a>
+                <a href="https://bee.questagame.com/#/?_k=izsl0a" target="_blank"><img src="../img/QuestaGame.png" alt="img9"></a>
+            </div>
+        </div>
+
+        <ul class="navigation">
+            <li class="active"><a href="../index/index.html"><i class="fa-solid fa-house"></i></a></li>
+            <li><a href="#"><i class="fa-solid fa-book"></i></a></li>
+            <li><a href="https://linktr.ee/nekoinuda" target="_blank"><i class="fa-solid fa-user"></i></a></li>
+        </ul>
+    </section>   
+
+    <script>
+        window.onload = function(){
+            setTimeout(() =>{
+                const loader =document.querySelector(".loader");
+                loader.classList.add("loaded");
+
+                const content = document.querySelector(".content");
+                content.style.visibility = "visible";
+            }, 1300)
+        }
+    </script>
+</body>
+</html>

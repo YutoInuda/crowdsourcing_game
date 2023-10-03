@@ -1,0 +1,238 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+body{
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/* round1 */
+.round-wrap {
+  width: 420px;
+  height: 420px;
+  position: absolute;
+  top: -120px;
+  left: -120px;
+  z-index: 100;
+  overflow: visible;
+}
+.rotate {
+  width: 100%;
+  height: 100%;
+  animation: rotate-anime 30s linear infinite;
+}
+@keyframes rotate-anime {
+    0%  {transform: rotate(0);}
+  100%  {transform: rotate(-360deg);}
+}
+.round {
+  width: 100%;
+  height: 100%;
+  border-radius: 30% 70% 60% 40% / 30% 40% 60% 70%;
+  animation: round_anime 5s linear infinite;
+  background-color: #03A9F4;
+}
+@keyframes round_anime {
+    0% { border-radius: 30% 70% 60% 40% / 30% 40% 60% 70%;}
+   25% { border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;}
+   50% { border-radius: 70% 30% 30% 70% / 50% 70% 30% 50%;}
+   75% { border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;}
+  100% { border-radius: 30% 70% 60% 40% / 30% 40% 60% 70%;}
+}
+
+/* round2 */
+.round-wrap2 {
+  width: 420px;
+  height: 420px;
+  position: absolute;
+  right: -120px;
+  bottom: -120px;
+  overflow: visible;
+  z-index: 5;
+}
+.rotate2 {
+  width: 100%;
+  height: 100%;
+  animation: rotate-anime 30s linear infinite;
+}
+@keyframes rotate-anime {
+    0%  {transform: rotate(0);}
+  100%  {transform: rotate(-360deg);}
+}
+.round2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 30% 70% 60% 40% / 30% 40% 60% 70%;
+  animation: round_anime 5s linear infinite;
+  background-color: #03A9F4;
+}
+@keyframes round_anime {
+    0% { border-radius: 30% 70% 60% 40% / 30% 40% 60% 70%;}
+   25% { border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;}
+   50% { border-radius: 70% 30% 30% 70% / 50% 70% 30% 50%;}
+   75% { border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;}
+  100% { border-radius: 30% 70% 60% 40% / 30% 40% 60% 70%;}
+}
+
+
+/* Crowdsourcing Text */
+.circles{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-color: #cff0e5;
+    overflow: hidden;
+}
+
+.circle{
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle1{
+    background-color: green;
+    width: 630px;
+    height: 630px;
+    margin: -315px 0 0 -315px;
+}
+
+.circle2{
+    background-color: red;
+    width: 420px;
+    height: 420px;
+    z-index: 1;
+    margin: -220px 0 0 -220px;
+}
+
+.circle3{
+    background-color: purple;
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+    margin: -100px 0 0 -100px;
+}
+
+.cursor{
+    position: fixed;
+    background-color: blue;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    margin: -7.5px 0 0 -7.5px;
+    user-select: none;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.content{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    mix-blend-mode: screen;
+    z-index: 4;
+}
+
+.content h1{
+    font-size: 6.5rem;
+}
+
+
+/* botton */
+.link{
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-top: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+a{
+    position: relative;
+    background: #444;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    letter-spacing: 0.1em;
+    font-weight: 400;
+    padding: 10px 30px;
+    transition: 0.5s;
+}
+a:hover{
+    letter-spacing: 0.25em;
+    background: var(--cir);
+    /* color: var(--cir); */
+    box-shadow: 0 0 4px var(--cir);
+}
+
+a::before{
+    content:'';
+    position:absolute;
+    inset: 2px;
+    background: #27282c;
+}
+
+a span{
+    position: relative;
+    z-index: 1;
+}
+
+a i{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+
+a i::before{
+    content: '';
+    position: absolute;
+    top: -6px;
+    left:100%;
+    transform:translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #27282c;
+    border: 2px solid var(--cir);
+    transition: 0.5s;
+}
+
+a:hover i::before{
+    left:0%;
+    transform: translateX(-50%) rotate(45deg);
+    box-shadow: 40px 39px var(--cir);
+}
+
+a i::after{
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left:0;
+    transform:translateX(-50%);
+    width: 10px;
+    height: 10px;
+    background: #27282c;
+    border: 2px solid var(--cir);
+    transition: 0.5s;
+}
+
+a:hover i::after{
+    left:100%;
+    transform: translateX(-50%) rotate(-135deg);
+    box-shadow: 38px 39px var(--cir);
+}

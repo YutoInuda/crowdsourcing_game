@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crowdsourcing Games</title>
+    <link rel="stylesheet" href="scrach.css">
+</head>
+<body>
+    <section>
+        <div class="content">
+            <h2>Scratch-Off</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non modi dolorum, quaerat, quis doloremque ut excepturi vero distinctio, explicabo voluptatem nam saepe assumenda magni ullam similique laboriosam sunt alias.Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non modi dolorum, quaerat, quis doloremque ut excepturi vero distinctio, explicabo voluptatem nam saepe assumenda magni ullam similique laboriosam sunt alias.Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non modi dolorum, quaerat, quis doloremque ut excepturi vero distinctio, explicabo voluptatem nam saepe assumenda magni ullam similique laboriosam sunt alias.Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae non modi dolorum, quaerat, quis doloremque ut excepturi vero distinctio, explicabo voluptatem nam saepe assumenda magni ullam similique laboriosam sunt alias.</p>
+        </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/p5@1.7.0/lib/p5.js"></script>
+    <script>
+        function setup(){
+            createCanvas(windowWidth, windowHeight);
+        }
+
+        function draw(){
+            strokeWeight(100);
+            if(mouseIsPressed === true){
+                line(mouseX, mouseY, pmouseX, pmouseY)
+            }
+        }
+    </script>
+</body>
+</html>
