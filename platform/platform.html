@@ -15,42 +15,56 @@
     <section class="content">
         <header>
             <a href="#" class="logo"><img src="../img/user.png" alt="user"></a>
-            <div class="wifi"></div>
+            <!-- スコアとバッジ -->
+            <p class="count"><span class="number">300</span>pt<br><span class="city">Lv.3 ゲーム都市</span></p>
         </header>
 
         <div class="imgScroll">
             <div>
-                <a href="https://fold.it/" target="_blank"><img src="../img/foldit-full.jpg" alt="img1"></a>
-                <a href="https://honkoku.org/" target="_blank"><img src="../img/みんなで翻刻.png" alt="img2"></a>
-                <a href="https://eyewire.org/explore" target="_blank"><img src="../img/Eyewire.png" alt="img3"></a>
-                <a href="https://stallcatchers.com/main" target="_blank"><img src="../img/stallcatchers.png" alt="img4"></a>
-                <a href="https://www.artigo.org/en" target="_blank"><img src="../img/ARTigo.png" alt="img5"></a>
-                <a href="https://phylo.cs.mcgill.ca/" target="_blank"><img src="../img/PHYLO.png" alt="img6"></a>
-                <a href="https://crowdsource.google.com/" target="_blank"><img src="../img/crowdsource.png" alt="img7"></a>
-                <a href="https://www.mozak.science/landing" target="_blank"><img src="../img/mozak.png" alt="img8"></a>
-                <a href="https://bee.questagame.com/#/?_k=izsl0a" target="_blank"><img src="../img/QuestaGame.png" alt="img9"></a>
+                <a href="https://stallcatchers.com/main" target="_blank"><img src="../img/stallcatchers.png" alt="img1"></a>
+                <a href="https://cwgame.spotteron.net/championship" target="_blank"><img src="../img/crowdWater.png" alt="img2"></a>
+                <a href="https://crowdsource.google.com/" target="_blank"><img src="../img/crowdsource.png" alt="img3"></a>
+                <a href="https://honkoku.org/" target="_blank"><img src="../img/みんなで翻刻.png" alt="img6"></a>
+                <a href="https://phylo.cs.mcgill.ca/" target="_blank"><img src="../img/PHYLO.png" alt="img5"></a>
+                <a href="https://www.mozak.science/landing" target="_blank"><img src="../img/mozak.png" alt="img4"></a>
+                <a href="https://eternagame.org/" target="_blank"><img src="../img/eterna.png" alt="img7"></a>
+                <a href="https://eyewire.org/explore" target="_blank"><img src="../img/Eyewire.png" alt="img8"></a>
+                <a href="https://www.artigo.org/en" target="_blank"><img src="../img/ARTigo.png" alt="img9"></a>
             </div>
             <div>
-                <a href="https://fold.it/" target="_blank"><img src="../img/foldit-full.jpg" alt="img1"></a>
-                <a href="https://honkoku.org/" target="_blank"><img src="../img/みんなで翻刻.png" alt="img2"></a>
-                <a href="https://eyewire.org/explore" target="_blank"><img src="../img/Eyewire.png" alt="img3"></a>
-                <a href="https://stallcatchers.com/main" target="_blank"><img src="../img/stallcatchers.png" alt="img4"></a>
-                <a href="https://www.artigo.org/en" target="_blank"><img src="../img/ARTigo.png" alt="img5"></a>
-                <a href="https://phylo.cs.mcgill.ca/" target="_blank"><img src="../img/PHYLO.png" alt="img6"></a>
-                <a href="https://crowdsource.google.com/" target="_blank"><img src="../img/crowdsource.png" alt="img7"></a>
-                <a href="https://www.mozak.science/landing" target="_blank"><img src="../img/mozak.png" alt="img8"></a>
-                <a href="https://bee.questagame.com/#/?_k=izsl0a" target="_blank"><img src="../img/QuestaGame.png" alt="img9"></a>
+                <a href="https://stallcatchers.com/main" target="_blank"><img src="../img/stallcatchers.png" alt="img1"></a>
+                <a href="https://cwgame.spotteron.net/championship" target="_blank"><img src="../img/crowdWater.png" alt="img2"></a>
+                <a href="https://crowdsource.google.com/" target="_blank"><img src="../img/crowdsource.png" alt="img3"></a>
+                <a href="https://honkoku.org/" target="_blank"><img src="../img/みんなで翻刻.png" alt="img6"></a>
+                <a href="https://phylo.cs.mcgill.ca/" target="_blank"><img src="../img/PHYLO.png" alt="img5"></a>
+                <a href="https://www.mozak.science/landing" target="_blank"><img src="../img/mozak.png" alt="img4"></a>
+                <a href="https://eternagame.org/" target="_blank"><img src="../img/eterna.png" alt="img7"></a>
+                <a href="https://eyewire.org/explore" target="_blank"><img src="../img/Eyewire.png" alt="img8"></a>
+                <a href="https://www.artigo.org/en" target="_blank"><img src="../img/ARTigo.png" alt="img9"></a>
             </div>
         </div>
 
         <ul class="navigation">
             <li class="active"><a href="../index/index.html"><i class="fa-solid fa-house"></i></a></li>
-            <li><a href="#"><i class="fa-solid fa-book"></i></a></li>
+            <li><a href="../instruction/instruction.html"><i class="fa-solid fa-book"></i></a></li>
             <li><a href="https://linktr.ee/nekoinuda" target="_blank"><i class="fa-solid fa-user"></i></a></li>
         </ul>
     </section>   
 
     <script>
+        const project = setInterval(projectDone, 10);
+        let count1 =1;
+
+        function projectDone(){
+            count1++;
+            document.querySelector(".number").innerHTML = count1;
+            // カウント停止
+            if (count1 ==300){
+                clearInterval(project);
+            }
+        }
+
+        // ローディング画面
         window.onload = function(){
             setTimeout(() =>{
                 const loader =document.querySelector(".loader");
