@@ -15,32 +15,41 @@
     <section class="content">
         <header>
             <a href="#" class="logo"><img src="../img/user.png" alt="user"></a>
-            <!-- スコアとバッジ -->
-            <p class="count"><span class="number">300</span>pt<br><span class="city">Lv.3 ゲーム都市</span></p>
+            <div class="grass">
+                <div>
+                    <div id="counter-container">
+                        <p id="city-size">Lv.1 ゲーム社会</p>
+                        <p id="counter">0</p><span>pt</span>
+                    </div>
+                </div>
+                <div id="progress-status">発展まであと100pt</div>
+                <div id="progressbar">
+                <div class="progress" id="progress">0%</div>
+            </div>
         </header>
 
         <div class="imgScroll">
             <div>
-                <a href="https://stallcatchers.com/main" target="_blank"><img src="../img/stallcatchers.png" alt="img1"></a>
-                <a href="https://cwgame.spotteron.net/championship" target="_blank"><img src="../img/crowdWater.png" alt="img2"></a>
-                <a href="https://crowdsource.google.com/" target="_blank"><img src="../img/crowdsource.png" alt="img3"></a>
-                <a href="https://honkoku.org/" target="_blank"><img src="../img/みんなで翻刻.png" alt="img6"></a>
-                <a href="https://phylo.cs.mcgill.ca/" target="_blank"><img src="../img/PHYLO.png" alt="img5"></a>
-                <a href="https://www.mozak.science/landing" target="_blank"><img src="../img/mozak.png" alt="img4"></a>
-                <a href="https://eternagame.org/" target="_blank"><img src="../img/eterna.png" alt="img7"></a>
-                <a href="https://eyewire.org/explore" target="_blank"><img src="../img/Eyewire.png" alt="img8"></a>
-                <a href="https://www.artigo.org/en" target="_blank"><img src="../img/ARTigo.png" alt="img9"></a>
+                <a href="https://stallcatchers.com/main" class="increment" id="clickButton1" target="_blank"><img src="../img/stallcatchers.png" alt="img1"></a>
+                <a href="https://cwgame.spotteron.net/championship" class="increment" id="clickButton2"  target="_blank"><img src="../img/crowdWater.png" alt="img2"></a>
+                <a href="https://crowdsource.google.com/" class="increment" id="clickButton3"  target="_blank"><img src="../img/crowdsource.png" alt="img3"></a>
+                <a href="https://honkoku.org/" class="increment" id="clickButton4" target="_blank"><img src="../img/みんなで翻刻.png" alt="img6"></a>
+                <a href="https://phylo.cs.mcgill.ca/" class="increment" id="clickButton5" target="_blank"><img src="../img/PHYLO.png" alt="img5"></a>
+                <a href="https://www.mozak.science/landing" class="increment" id="clickButton6" target="_blank"><img src="../img/mozak.png" alt="img4"></a>
+                <a href="https://eternagame.org/" class="increment" id="clickButton7" target="_blank"><img src="../img/eterna.png" alt="img7"></a>
+                <a href="https://eyewire.org/explore" class="increment" id="clickButton8" target="_blank"><img src="../img/Eyewire.png" alt="img8"></a>
+                <a href="https://www.artigo.org/en" class="increment" id="clickButton9" target="_blank"><img src="../img/ARTigo.png" alt="img9"></a>
             </div>
             <div>
-                <a href="https://stallcatchers.com/main" target="_blank"><img src="../img/stallcatchers.png" alt="img1"></a>
-                <a href="https://cwgame.spotteron.net/championship" target="_blank"><img src="../img/crowdWater.png" alt="img2"></a>
-                <a href="https://crowdsource.google.com/" target="_blank"><img src="../img/crowdsource.png" alt="img3"></a>
-                <a href="https://honkoku.org/" target="_blank"><img src="../img/みんなで翻刻.png" alt="img6"></a>
-                <a href="https://phylo.cs.mcgill.ca/" target="_blank"><img src="../img/PHYLO.png" alt="img5"></a>
-                <a href="https://www.mozak.science/landing" target="_blank"><img src="../img/mozak.png" alt="img4"></a>
-                <a href="https://eternagame.org/" target="_blank"><img src="../img/eterna.png" alt="img7"></a>
-                <a href="https://eyewire.org/explore" target="_blank"><img src="../img/Eyewire.png" alt="img8"></a>
-                <a href="https://www.artigo.org/en" target="_blank"><img src="../img/ARTigo.png" alt="img9"></a>
+                <a href="https://stallcatchers.com/main" class="increment" id="clickButton10" target="_blank"><img src="../img/stallcatchers.png" alt="img1"></a>
+                <a href="https://cwgame.spotteron.net/championship" class="increment" id="clickButton11" target="_blank"><img src="../img/crowdWater.png" alt="img2"></a>
+                <a href="https://crowdsource.google.com/" class="increment" id="clickButton12" target="_blank"><img src="../img/crowdsource.png" alt="img3"></a>
+                <a href="https://honkoku.org/" class="increment" id="clickButton13" target="_blank"><img src="../img/みんなで翻刻.png" alt="img6"></a>
+                <a href="https://phylo.cs.mcgill.ca/" class="increment" id="clickButton14" target="_blank"><img src="../img/PHYLO.png" alt="img5"></a>
+                <a href="https://www.mozak.science/landing" class="increment" id="clickButton15" target="_blank"><img src="../img/mozak.png" alt="img4"></a>
+                <a href="https://eternagame.org/" class="increment" id="clickButton16" target="_blank"><img src="../img/eterna.png" alt="img7"></a>
+                <a href="https://eyewire.org/explore" class="increment" id="clickButton17" target="_blank"><img src="../img/Eyewire.png" alt="img8"></a>
+                <a href="https://www.artigo.org/en" class="increment" id="clickButton18" target="_blank"><img src="../img/ARTigo.png" alt="img9"></a>
             </div>
         </div>
 
@@ -51,29 +60,7 @@
         </ul>
     </section>   
 
-    <script>
-        const project = setInterval(projectDone, 10);
-        let count1 =1;
-
-        function projectDone(){
-            count1++;
-            document.querySelector(".number").innerHTML = count1;
-            // カウント停止
-            if (count1 ==300){
-                clearInterval(project);
-            }
-        }
-
-        // ローディング画面
-        window.onload = function(){
-            setTimeout(() =>{
-                const loader =document.querySelector(".loader");
-                loader.classList.add("loaded");
-
-                const content = document.querySelector(".content");
-                content.style.visibility = "visible";
-            }, 1300)
-        }
-    </script>
+    <script src="platform.js"></script>
+    <script src="progressBar.js"></script>
 </body>
 </html>
