@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -44,6 +45,7 @@
 /*platform*/
 body{
     overflow: hidden;
+    transition: background-image 1.5s ease-in-out;
 }
 section{
     display: flex;
@@ -87,6 +89,7 @@ header .grass {
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );  
     font-size: 20px;
+    font-family: 'DotGothic16', sans-serif;
 }
 
 /* pointSyetem */
@@ -97,6 +100,7 @@ header .grass {
 
 #city-size{
     font-size: 1.4em;
+    font-family: 'DotGothic16', sans-serif;
 }
 
 #counter {
@@ -104,10 +108,12 @@ header .grass {
     font-size: 1.3em;
     margin-bottom: 40px;
     margin-right: 7px;
+    font-family: 'DotGothic16', sans-serif;
 }
 
 #pt{
     font-size: 0.5em;
+    font-family: 'DotGothic16', sans-serif;
 }
 
 
@@ -116,6 +122,7 @@ header .grass {
     font-size: 12px;
     margin-left: 150px;
     margin-top: 5px;
+    font-family: 'DotGothic16', sans-serif;
 }
 
 #progressbar {
@@ -135,6 +142,8 @@ header .grass {
     color: white;
     transition: width 0.2s ease;
     border-radius: 15px; /* Round corners of the progress */
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 17px;
 }
 
 /* navigation(home button etc.) */
