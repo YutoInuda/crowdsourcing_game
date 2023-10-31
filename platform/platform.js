@@ -12,15 +12,18 @@
         }
 
 
-
-
 // PointSystem
-        document.addEventListener('visibilitychange', function() {
-            if (!document.hidden && localStorage.getItem('clicked')) {
-                incrementCounter();
-                localStorage.removeItem('clicked'); // Remove the clicked event after triggering the increment
-            }
-        });
+
+document.addEventListener('visibilitychange', function() {
+    const lastClicked = parseInt(localStorage.getItem('lastClicked'), 10);
+    const now = new Date().getTime();
+// ここの秒数を変更する
+    if (!document.hidden && localStorage.getItem('clicked') && now - lastClicked >= 10000) {
+        incrementCounter();
+        progressBar.update();
+        localStorage.removeItem('clicked'); // Remove the clicked event after triggering the increment
+    }
+});
         
         function loadCounter() {
             const counterElement = document.getElementById('counter');
@@ -31,10 +34,10 @@
             updateCitySize(currentCount, citySizeElement);
         }
         
-        
         document.querySelectorAll('.increment').forEach(function(incrementButton) {
             incrementButton.addEventListener('click', function(event) {
                 localStorage.setItem('clicked', true); // Record the click event in localStorage
+                localStorage.setItem('lastClicked', new Date().getTime()); // Record the time of the click
             });
         });
         
@@ -60,35 +63,37 @@
             const bodyElement = document.body;
         
             if (count >= 0 && count < 100) {
-                bodyElement.style.backgroundImage = "url(../img/city1.png)";
+                bodyElement.style.backgroundImage = "url(../img/city0.png)";
             } else if (count >= 100 && count < 200) {
                 bodyElement.style.backgroundImage = "url(../img/city1.png)";
             } else if (count >= 200 && count < 300) {
-                bodyElement.style.backgroundImage = "url(../img/city1.png)";
+                bodyElement.style.backgroundImage = "url(../img/city2.png)";
             }else if (count >= 300 && count < 400) {
-                bodyElement.style.backgroundImage = "url(../img/city1.png)";
+                bodyElement.style.backgroundImage = "url(../img/city3.png)";
             } else if (count >= 400 && count < 500) {
-                bodyElement.style.backgroundImage = "url(../img/city1.png)";
+                bodyElement.style.backgroundImage = "url(../img/city4.png)";
             }else if (count >= 500 && count < 600) {
-                bodyElement.style.backgroundImage = "url(../img/city1.png)";
+                bodyElement.style.backgroundImage = "url(../img/city5.png)";
             } else if (count >= 600 && count < 700) {
-                bodyElement.style.backgroundImage = "url(../img/city1.png)";
+                bodyElement.style.backgroundImage = "url(../img/city6.png)";
             }else if (count >= 700 && count < 800) {
-                bodyElement.style.backgroundImage = "url(../img/city1.png)";
+                bodyElement.style.backgroundImage = "url(../img/city7.png)";
             } else if (count >= 800 && count < 900) {
-                bodyElement.style.backgroundImage = "url(../img/city1.png)";
+                bodyElement.style.backgroundImage = "url(../img/city8.png)";
             }else if (count >= 900 && count < 1000) {
-                bodyElement.style.backgroundImage = "url(../img/city1.png)";
+                bodyElement.style.backgroundImage = "url(../img/city9.png)";
             } else if (count >= 1000 && count < 1100) {
-                bodyElement.style.backgroundImage = "url(../img/city1.png)";
+                bodyElement.style.backgroundImage = "url(../img/city10.png)";
             }else if (count >= 1100 && count < 1200) {
-                bodyElement.style.backgroundImage = "url(../img/city1.png)";
+                bodyElement.style.backgroundImage = "url(../img/city11.png)";
             } else if (count >= 1200 && count < 1300) {
-                bodyElement.style.backgroundImage = "url(../img/city1.png)";
+                bodyElement.style.backgroundImage = "url(../img/city12.png)";
             }else if (count >= 1300 && count < 1400) {
-                bodyElement.style.backgroundImage = "url(../img/city1.png)";
+                bodyElement.style.backgroundImage = "url(../img/city13.png)";
             } else if (count >= 1400 && count < 1500) {
-                bodyElement.style.backgroundImage = "url(../img/city1.png)";
+                bodyElement.style.backgroundImage = "url(../img/city14.png)";
+            }else if (count >= 1500 && count < 1600) {
+                bodyElement.style.backgroundImage = "url(../img/city15.png)";
             }
         }
         
@@ -123,9 +128,73 @@
                 citySizeElement.innerText = 'Lv.13 ゲーム社会';
             } else if (count >= 1400 && count < 1500) {
                 citySizeElement.innerText = 'Lv.14 ゲーム社会';
+            }else if (count >= 1500 && count < 1600) {
+                citySizeElement.innerText = 'Lv.15 ゲーム社会';
             }
             updateBackgroundImage(count);
         }
         
         
+        
+// ProgressBar
+function manageProgress() {
+    const progressElement = document.getElementById('progress');
+    const progressStatusElement = document.getElementById('progress-status');
+
+    return {
+        load: function() {
+            const progress = localStorage.getItem('progress');
+            if (progress) {
+                this.updateUI(progress);
+            }
+        },
+        
+        updateUI: function(progress) {
+            progressElement.style.width = progress + '%';
+            progressElement.textContent = progress + '%';
+            progressStatusElement.textContent = `発展まであと${100 - progress}pt`;
+        },
+
+        update: function() {
+            let width = parseInt(progressElement.style.width || '0');
+            const targetWidth = width + 25;
+
+            const interval = setInterval(() => {
+                if (width < targetWidth) {
+                    width += 1;
+                    this.updateUI(width);
+                    localStorage.setItem('progress', width); // Save the progress to localStorage
+
+                    if (width >= 100) {
+                        clearInterval(interval);
+                        setTimeout(() => {
+                            this.updateUI(0);
+                            localStorage.setItem('progress', 0); // Reset the progress in localStorage
+                        }, 100);
+                    }
+                } else {
+                    clearInterval(interval);
+                }
+            }, 100);
+        }
+    };
+}
+
+const progressBar = manageProgress();
+progressBar.load(); // Load the progress when the page loads
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         

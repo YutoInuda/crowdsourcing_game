@@ -46,6 +46,9 @@
 body{
     overflow: hidden;
     transition: background-image 1.5s ease-in-out;
+    background-size: 1300px;
+    background-position: center top;
+    background-repeat: no-repeat;
 }
 section{
     display: flex;
