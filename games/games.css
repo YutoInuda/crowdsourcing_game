@@ -4,6 +4,56 @@
     box-sizing: border-box;
 }
 
+
+/*load  */
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.loader svg{
+    width: 100px;
+    height: 100px;
+}
+
+.loader svg rect{
+    width: 100px;
+    height: 100px;
+    fill: none;
+    stroke-width: 100px;
+    stroke: #00adff;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 50%;
+    animation: rotateBox 2s linear infinite;
+}
+@keyframes rotateBox {
+    to{
+        stroke-dashoffset: 250%;
+    }
+}
+
+.loaded{
+    opacity: 0;
+    min-height: 0;
+    height: 0;
+    transition: all 0.7s;
+}
+
+.content{
+    visibility: hidden;
+    transition: visibility 3s;
+    transition-delay: 0.3s;
+}
+
+
+/* content */
+body{
+    overflow: hidden;
+}
+
 section{
     position: relative;
     min-height: 100vh;
@@ -130,6 +180,30 @@ section .container .dataBx .imgBx{
 section  .active .dataBx .imgBx{
     left: -100%;
 }
+
+
+/* ボタン */
+.btMain button{
+    font-size: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    background: #677eff;
+    color: #fff;
+    letter-spacing: 0.05em;
+    margin-top: 10px;
+    font-weight: 600;
+    border: none;
+    border-radius: 40px;
+    transition: 0.5s;
+    margin: 30px 12px;
+}
+
+.btMain button:hover{
+    letter-spacing: 0.2em;
+}
+
+
 
 @media(max-width:991px){
     section .container{

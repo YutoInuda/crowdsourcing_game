@@ -3,8 +3,13 @@ function togglePannel(){
     container.classList.toggle('active');
 }
 
-document.querySelectorAll('.increment').forEach(function(incrementButton) {
-    incrementButton.addEventListener('click', function(event) {
-        localStorage.setItem('ok', true); // Record the click event in localStorage as a string
-    });
-});
+window.onload = function(){
+    setTimeout(() =>{
+        const loader =document.querySelector(".loader");
+        loader.classList.add("loaded");
+
+        const content = document.querySelector(".content");
+        content.style.visibility = "visible";
+    }, 1300)
+    loadCounter();
+}
