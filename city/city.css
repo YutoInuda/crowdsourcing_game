@@ -49,6 +49,7 @@ body{
     background-size: 1300px;
     background-position: center top;
     background-repeat: no-repeat;
+    background-color: #c6e4ef;
 }
 section{
     display: flex;
@@ -81,10 +82,50 @@ header .logo img{
     margin-bottom: 150px;
 }
 
+/* cloud */
+.clouds{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100vw ;
+    height: 100vh ;
+
+}
+
+
+.cloud1 {
+    height: 200px;
+    width: 250px;
+    position: absolute;
+    top: 100px;
+}
+
+.cloud2 {
+    height: 380px;
+    width: 420px;
+    position: absolute;
+    top: 300px;
+
+}
+
+
+.clouds img{
+    animation: animate calc(50s * var(--i)) linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        transform: translateX(-150%);
+
+    }100%{
+        transform: translateX(700%);
+    }
+}
+
 /* grassMorphism */
 header .grass {
-    width: 280px;
-    height: 180px;
+    width: 300px;
+    height: 188px;
     background: rgba( 255, 255, 255, 0.25 );
     box-shadow: 0 4px 10px 0 rgba( 31, 38, 135, 0.37 );
     backdrop-filter: blur( 4px );
@@ -92,7 +133,8 @@ header .grass {
     border-radius: 10px;
     border: 1px solid rgba( 255, 255, 255, 0.18 );  
     font-size: 20px;
-    font-family: 'DotGothic16', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    z-index: 5;
 }
 
 /* pointSyetem */
@@ -102,21 +144,23 @@ header .grass {
 }
 
 #city-size{
-    font-size: 1.4em;
-    font-family: 'DotGothic16', sans-serif;
+    font-size: 1.6em;
+    font-family: 'Train One', sans-serif;
+    padding-bottom: 3px;
 }
 
 #counter {
     display: inline;
-    font-size: 1.3em;
+    font-size: 1.7em;
     margin-bottom: 40px;
     margin-right: 7px;
-    font-family: 'DotGothic16', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-style: italic;
 }
 
 #pt{
     font-size: 0.5em;
-    font-family: 'DotGothic16', sans-serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 
@@ -124,8 +168,7 @@ header .grass {
 #progress-status {
     font-size: 12px;
     margin-left: 150px;
-    margin-top: 5px;
-    font-family: 'DotGothic16', sans-serif;
+    margin-top: 10px;
 }
 
 #progressbar {
@@ -145,7 +188,6 @@ header .grass {
     color: white;
     transition: width 0.2s ease;
     border-radius: 15px; /* Round corners of the progress */
-    font-family: 'DotGothic16', sans-serif;
     font-size: 17px;
 }
 
@@ -187,68 +229,3 @@ header .grass {
     color: #f00;
 }
 
-/* scroll */
-.imgScroll{
-    position: absolute;
-    left: 0;
-    padding: 60px 0;
-    width: 100%;
-    display: flex;
-    overflow-x: hidden;
-}
-
-.imgScroll div{
-    display: flex;
-    animation: animate 40s linear infinite;
-    animation-delay: -40s;
-}
-
-.imgScroll div:nth-child(2){
-    animation: animate2 40s linear infinite;
-    animation-delay: -20s;
-}
-
-.imgScroll:hover div,
-.imgScroll:hover div:nth-child(2){
-    animation-play-state: paused;
-}
-
-@keyframes animate {
-    0%{
-        transform: translateX(100%);
-    }
-    100%{
-        transform: translateX(-100%);
-    }
-}
-
-@keyframes animate2 {
-    0%{
-        transform: translateX(0%);
-    }
-    100%{
-        transform: translateX(-200%);
-    }
-}
-
-.imgScroll div img{
-    margin: 0 25px;
-    max-width: 350px;
-    border: 10px solid transparent;
-    transition: 0.25s;
-}
-
-.imgScroll div img:hover{
-    border: 7px solid #fff;
-    box-shadow: 0 20px 40px rgba(0,0, 0, 0.2);
-}
-
-.imgScroll:hover div img{
-    opacity: 0.1;
-    filter: blur(5px);
-}
-
-.imgScroll div img:hover{
-    opacity: 1;
-    filter: blur(0px);
-}
