@@ -86,7 +86,7 @@ section .container .user .imgBx{
     position: relative;
     width: 50%;
     height: 100%;
-    background: #ff0;
+    background: #fff;
     transition: 0.5s;
 }
 
@@ -201,6 +201,125 @@ section  .active .dataBx .imgBx{
 
 .btMain button:hover{
     letter-spacing: 0.2em;
+}
+
+
+/* back */
+.back{
+    position: absolute;
+    bottom:0;
+    right: 2%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+}
+
+.back li{
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #262626;
+    transition: .5s;
+}
+
+.back li:hover{
+    background: #677eff;
+    border: none;
+}
+
+.back li span{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translateY(-50%) rotate(-45deg);
+    width: 20px;
+    height: 20px;
+    border: 4px solid #262626;
+    border-right: none;
+    border-bottom: none;
+    transition: .5s;
+}
+
+.back li span::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    transform-origin: left;
+    transform: rotate(45deg) translate(-2px, -1px) scale(0);
+    transition: .5s;
+}
+
+.back li:hover span{
+    left: 28%;
+    border-color: #fff;
+}
+
+.back li:hover span::before{
+    transform: rotate(45deg) translate(-2px, -1px) scale(1);
+}
+
+
+
+/* next */
+ul{
+    position: absolute;
+    bottom:0;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+}
+
+ul li{
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #262626;
+    transition: .5s;
+}
+
+ul li:hover{
+    background: #677eff;
+    border: none;
+}
+
+ul li span{
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    transform: translateY(-50%) rotate(-45deg);
+    width: 20px;
+    height: 20px;
+    border: 4px solid #262626;
+    border-left: none;
+    border-top: none;
+    transition: .5s;
+}
+
+ul li span::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    transform-origin: right;
+    transform: rotate(45deg) translate(0px, 20px) scale(0);
+    transition: .5s;
+}
+
+ul li:hover span{
+    right: 28%;
+    border-color: #fff;
+}
+
+ul li:hover span::before{
+    transform: rotate(45deg) translate(0px, 20px) scale(1);
 }
 
 
