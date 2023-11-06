@@ -5,29 +5,29 @@ const colors = [
     '#74ff1d'
 ]
 
-function createSquare(){
-    const container = document.querySelector('.container');
-    const square = document.createElement('span');
+// function createSquare(){
+//     const container = document.querySelector('.container');
+//     const square = document.createElement('span');
 
-    let size = Math.random() * 80;
+//     let size = Math.random() * 80;
 
-    square.style.width = 90 + size + 'px';
-    square.style.height = 90 + size + 'px';
+//     square.style.width = 90 + size + 'px';
+//     square.style.height = 90 + size + 'px';
 
-    square.style.top = Math.random() * innerHeight + 'px';
-    square.style.left = Math.random() * innerWidth + 'px';
+//     square.style.top = Math.random() * innerHeight + 'px';
+//     square.style.left = Math.random() * innerWidth + 'px';
 
-    const bg = colors[Math.floor(Math.random() * colors.length)];
-    square.style.background = bg;
+//     const bg = colors[Math.floor(Math.random() * colors.length)];
+//     square.style.background = bg;
 
-    container.appendChild(square);
+//     container.appendChild(square);
 
-    setTimeout(() =>{
-        square.remove()
-    }, 5000)
-}
+//     setTimeout(() =>{
+//         square.remove()
+//     }, 5000)
+// }
 
-setInterval(createSquare, 1400);
+// setInterval(createSquare, 1400);
 
 
 //１文字１文字表示 
