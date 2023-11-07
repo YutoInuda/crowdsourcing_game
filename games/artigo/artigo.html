@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゲーム説明</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="artigo.css">
+</head>
+<body>
+    <div class="loader">
+        <svg><rect></rect></svg>
+    </div>
+
+    <section class="content">
+        <div class="container">
+            <div class="user dataBx">
+                <div class="imgBx"><img src="../img/Eyewire.png" alt="ゲーム説明"></div>
+                <div class="instBx">
+                    <h1>ARTigo</h1>
+                    <ul>
+                        <li>
+                            <span>開発元</span>
+                            <span>Ludwig-Maximilian University</span>
+                        </li>
+                        <li>
+                            <span>リリース年</span>
+                            <span>2010年</span>
+                        </li>
+                        <li>
+                            <span>タグ</span>
+                            <span>美術史</span>
+                        </li>
+                        <li>
+                            <span>ジャンル</span>
+                            <span>分類・識別</span>
+                        </li>
+                        <li>
+                            <span>難易度</span>
+                            <span>ふつう</span>
+                        </li>   
+                    </ul>
+                    <a href="#" onclick="togglePannel();"><div class="back"><li><span></span></li></div></a>
+                </div>
+            </div>
+            <div class="user overviewBx">
+                <div class="instBx">
+                    <div class="tent">
+                        <h2>内容</h2>
+                        <p>ARTigoは、美術作品にタグ付けを行う、もしくはタグに基づいて画像領域に注釈をつけるゲームです。ゲーム結果は、アート作品のデータベース作成に役立てられ、美術史研究を促進することができます。</p>
+                        <div class="btMain">
+                            <button onclick="location.href='../city/city.html'">RULE</button>
+                            <button onclick="location.href='https://www.artigo.org/en'">PLAY</button>
+                        </div>
+                    </div>                   
+                    <a href="#" onclick="togglePannel();"><div class="next"><li><span></span></li></div></a>
+                </div>
+                <div class="imgBx"><img src="../img/PHYLO.png" alt="ゲーム説明"></div>
+            </div>
+        </div>
+    </section>
+    <script src="artigo.js"></script>
+</body>
+</html>

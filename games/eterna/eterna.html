@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ゲーム説明</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="eterna.css">
+</head>
+<body>
+    <div class="loader">
+        <svg><rect></rect></svg>
+    </div>
+
+    <section class="content">
+        <div class="container">
+            <div class="user dataBx">
+                <div class="imgBx"><img src="../img/Eyewire.png" alt="ゲーム説明"></div>
+                <div class="instBx">
+                    <h1>Eterna</h1>
+                    <ul>
+                        <li>
+                            <span>開発元</span>
+                            <span>Carnegie Mellon University</span>
+                        </li>
+                        <li>
+                            <span>リリース年</span>
+                            <span>2010年</span>
+                        </li>
+                        <li>
+                            <span>タグ</span>
+                            <span>生化学, 生物医学</span>
+                        </li>
+                        <li>
+                            <span>ジャンル</span>
+                            <span>パズル</span>
+                        </li>
+                        <li>
+                            <span>難易度</span>
+                            <span>ふつう</span>
+                        </li>   
+                    </ul>
+                    <a href="#" onclick="togglePannel();"><div class="back"><li><span></span></li></div></a>
+                </div>
+            </div>
+            <div class="user overviewBx">
+                <div class="instBx">
+                    <div class="tent">
+                        <h2>内容</h2>
+                        <p>Eternaは、パズルを解くことで RNA を設計するゲームです。設計したRNAのデザインは、科学者が研究室でテストします。テストの結果はプレーヤーに返却され、プレーヤーはそれを使用してデザインを改善します。最終的なRNAのデザインは、医薬品の開発に役立てられます。</p>
+                        <div class="btMain">
+                            <button onclick="location.href='../city/city.html'">RULE</button>
+                            <button onclick="location.href='https://eternagame.org/'">PLAY</button>
+                        </div>
+                    </div>                   
+                    <a href="#" onclick="togglePannel();"><div class="next"><li><span></span></li></div></a>
+                </div>
+                <div class="imgBx"><img src="../img/PHYLO.png" alt="ゲーム説明"></div>
+            </div>
+        </div>
+    </section>
+    <script src="eterna.js"></script>
+</body>
+</html>
