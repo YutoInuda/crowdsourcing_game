@@ -109,20 +109,10 @@
 .content .box .contentBx h2{
     font-size: 2em;
     color: #fff;
-    max-width: 800px;
-}
-.content .box .contentBx h3{
-    font-size: 2em;
-    color: #fff;
+    font-family: 'Noto Sans JP';
     max-width: 800px;
 }
 
-.content .box .contentBx p{
-    font-size: 1.2em;
-    color: #fff;
-    max-width: 700px;
-    text-align: center;
-}
 
 .content .box .contentBx button{
     font-size: 1.2em;
