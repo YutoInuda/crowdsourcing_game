@@ -86,11 +86,20 @@ section .container .user .imgBx{
     position: relative;
     width: 50%;
     height: 100%;
-    background: #fff;
+    background: #144676;
     transition: 0.5s;
 }
 
 section .container .user .imgBx img{
+    position: absolute;
+    top: 12%;
+    left: 3%;
+    width: 92%;
+    height: auto;
+    object-fit: cover;
+}
+
+section .container .user .imgBx .gameView{
     position: absolute;
     top: 0;
     left: 0;
@@ -99,12 +108,13 @@ section .container .user .imgBx img{
     object-fit: cover;
 }
 
+
 /* いじるのはここから */
 section .container .user .instBx{
     position: relative;
     width: 50%;
     height: 100%;
-    background: #fff;
+    background: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;

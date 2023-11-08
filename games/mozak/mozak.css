@@ -99,12 +99,23 @@ section .container .user .imgBx img{
     object-fit: cover;
 }
 
+section .container .user .imgBx .gameView{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
 /* いじるのはここから */
 section .container .user .instBx{
     position: relative;
     width: 50%;
     height: 100%;
-    background: #fff;
+    background: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;

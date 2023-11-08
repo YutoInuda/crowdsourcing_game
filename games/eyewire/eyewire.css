@@ -90,7 +90,24 @@ section .container .user .imgBx{
     transition: 0.5s;
 }
 
+section .container .user .imgBl{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: black;
+    transition: 0.5s;
+} 
+
 section .container .user .imgBx img{
+    position: absolute;
+    top: 10%;
+    left: 3%;
+    width: 95%;
+    height: auto;
+    object-fit: cover;
+}
+
+section .container .user .imgBx .gameView{
     position: absolute;
     top: 0;
     left: 0;
@@ -104,7 +121,7 @@ section .container .user .instBx{
     position: relative;
     width: 50%;
     height: 100%;
-    background: #fff;
+    background: whitesmoke;
     display: flex;
     justify-content: center;
     align-items: center;
