@@ -7,6 +7,11 @@
     <title>Document</title>
 </head>
 <body>
+    <div class="loader">
+        <svg><rect></rect></svg>
+    </div>
+
+<section class="content">
     <section class="character">
         <div class="liquid">
             <h2>Crowdsourcing Games</h2>
@@ -16,47 +21,209 @@
         </div>
     </section>
    <section class="portfolio" id="portfolio">
+        <ul>
+            <li class="list active" data-filter="all">すべて</li>
+            <li class="list" data-filter="nature">自然科学</li>
+            <li class="list" data-filter="humanity">人文・社会科学</li>
+            <li class="list" data-filter="service">サービス・製品</li>
+            <li class="list" data-filter="infra">インフラ</li><br>
+            <h1>/</h1>
+            <li class="list" data-filter="puzzle">パズル</li>
+            <li class="list" data-filter="tag">分類・識別</li>
+            <li class="list" data-filter="simulate">シミュレーション</li>
+            <li class="list" data-filter="map">位置情報</li>
+        </ul>
     <div class="Portfolio-content">
-        <div class="row">
-            <img src="../img/PHYLO.png" alt="写真">
-            <div class="main-row">
-                <div class="row-text">
-                    <h5>PHYLO</h5>
+        <!-- ＃1 -->
+        <div class="row nature puzzle">
+            <a href="https://releases.jquery.com/">
+                <img src="../img/PHYLO.png" alt="写真">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>PHYLO</h5>
+                    </div>
                 </div>
-            </div>
-            <h4>PHYLO説明</h4>
+                <ul>
+                    <li>自然科学</li>
+                    <li>パズル</li>
+                </ul>
+            </a>
+        </div>
+        
+
+        <!-- ＃2 -->
+        <div class="row humanity tag">
+            <a href="https://releases.jquery.com/">
+                <img src="../img/ARTigo.png" alt="写真">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>ARTigo</h5>
+                    </div>
+                </div>
+                <ul>
+                    <li>人文・社会科学</li>
+                    <li>分類・識別</li>
+                </ul>
+            </a>
+        </div>
+        
+
+        <!-- ＃3 -->
+        <div class="row nature tag">
+            <a href="https://releases.jquery.com/">
+                <img src="../img/crowdWater.png" alt="写真">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>CrowdWater</h5>
+                    </div>
+                </div>
+                <ul>
+                    <li>自然科学</li>
+                    <li>分類・識別</li>
+                </ul>
+            </a> 
+        </div>
+           
+
+        <!-- ＃4 -->
+        <div class="row nature tag">
+            <a href="https://releases.jquery.com/">
+                <img src="../img/Eyewire.png" alt="写真">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Eyewire</h5>
+                    </div>
+                </div>
+                <ul>
+                    <li>自然科学</li>
+                    <li>分類・識別</li>
+                </ul>
+            </a>
+        </div>
+        
+        <!-- ＃5 -->
+        <div class="row nature tag">
+            <a href="https://releases.jquery.com/">
+                <img src="../img/mozak.png" alt="写真">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Mozak</h5>
+                    </div>
+                </div>
+                <ul>
+                    <li>自然科学</li>
+                    <li>分類・識別</li>
+                </ul>
+            </a>
         </div>
 
-        <div class="row">
-            <img src="../img/ARTigo.png" alt="写真">
-            <div class="main-row">
-                <div class="row-text">
-                    <h5>PHYLO</h5>
+        <!-- ＃6 -->
+        <div class="row nature puzzle">
+            <a href="https://releases.jquery.com/">
+                <img src="../img/eterna.png" alt="写真">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Eterna</h5>
+                    </div>
                 </div>
-            </div>
-            <h4>PHYLO説明</h4>
+                <ul>
+                    <li>自然科学</li>
+                    <li>パズル</li>
+                </ul>
+            </a>
         </div>
 
-        <div class="row">
-            <img src="../img/crowdWater.png" alt="写真">
-            <div class="main-row">
-                <div class="row-text">
-                    <h5>PHYLO</h5>
+        <!-- ＃7 -->
+        <div class="row nature tag">
+            <a href="https://releases.jquery.com/">
+                <img src="../img/stallcatchers.png" alt="写真">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Stall Catchers</h5>
+                    </div>
                 </div>
-            </div>
-            <h4>PHYLO説明</h4>
+                <ul>
+                    <li>自然科学</li>
+                    <li>分類・識別</li>
+                </ul>
+            </a>
         </div>
 
-        <div class="row">
-            <img src="../img/Eyewire.png" alt="写真">
-            <div class="main-row">
-                <div class="row-text">
-                    <h5>PHYLO</h5>
+        <!-- ＃8 -->
+        <div class="row nature map">
+            <a href="https://releases.jquery.com/">
+                <img src="../img/QuestaGame.png" alt="写真">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>QuestaGame</h5>
+                    </div>
                 </div>
-            </div>
-            <h4>PHYLO説明</h4>
+                <ul>
+                    <li>自然科学</li>
+                    <li>位置情報</li>
+                </ul>
+            </a>
         </div>
+
+        <!-- ＃9 -->
+        <div class="row service tag">
+            <a href="https://releases.jquery.com/">
+                <img src="../img/crowdsource.png" alt="写真">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>Crowdsource</h5>
+                    </div>
+                </div>
+                <ul>
+                    <li>サービス・製品</li>
+                    <li>分類・識別</li>
+                </ul>
+            </a>
+        </div>
+
+        <!-- ＃10 -->
+        <div class="row humanity tag">
+            <a href="https://releases.jquery.com/">
+                <img src="../img/みんなで翻刻.jpg" alt="写真">
+                <div class="main-row">
+                    <div class="row-text">
+                        <h5>みんなで翻刻</h5>
+                    </div>
+                </div>
+                <ul>
+                    <li>人文・社会科学</li>
+                    <li>分類・識別</li>
+                </ul>
+            </a>
+        </div>
+
     </div>
-   </section> 
+   </section>
+</section>
+   <script src="book.js"></script> 
+   <script src="https://code.jquery.com/jquery-3.7.1.js"
+  integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+  crossorigin="anonymous"></script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+        $('.list').click(function(){
+            const value = $(this).attr('data-filter');
+            if (value == 'all'){
+                $('.row').show('1000');
+            }
+            else{
+                $('.row').not('.'+value).hide('1000');
+                $('.row').filter('.'+value).show('1000');
+
+            }
+        })
+    })
+
+    $('.list').click(function(){
+        $(this).addClass('active').siblings().removeClass('active');
+    })
+  </script>
+
 </body>
 </html>

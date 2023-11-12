@@ -4,6 +4,57 @@
     box-sizing: border-box;
 }
 
+/*load  */
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.loader svg{
+    width: 100px;
+    height: 100px;
+}
+
+.loader svg rect{
+    width: 100px;
+    height: 100px;
+    fill: none;
+    stroke-width: 100px;
+    stroke: #00adff;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 50%;
+    animation: rotateBox 2s linear infinite;
+}
+@keyframes rotateBox {
+    to{
+        stroke-dashoffset: 250%;
+    }
+}
+
+.loaded{
+    opacity: 0;
+    min-height: 0;
+    height: 0;
+    transition: all 0.7s;
+}
+
+.content{
+    visibility: hidden;
+    transition: visibility 3s;
+    transition-delay: 0.3s;
+}
+
+/* メイン */
+
+body{
+    width: 100vw;
+    min-height: 100vh;
+    background: #3F73BE;
+}
+
 .character{
     position: relative;
     width: 100%;
@@ -63,12 +114,43 @@
     background: #3F73BE;
 }
 
+.portfolio ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio ul li{
+    list-style: none;
+    background: #eee;
+    padding: 8px 20px;
+    margin: 7px;
+    letter-spacing: 1px;
+    border-radius: 5%;
+    cursor: pointer;
+}
+
+.portfolio ul h1{
+    margin: 5px 10px;
+    font-size: 25px;
+    color: #eee;
+}
+
+.portfolio ul li.active{
+    background: #2aa64f;
+    color: #fff;
+}
+
 .Portfolio-content{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 300px));
     align-items: center;
     gap: 2.3rem;
     margin-top: 4.2rem;
+}
+
+.Portfolio-content a{
+    text-decoration: none;
+    color: black;
 }
 
 .row img{
@@ -80,12 +162,28 @@
 }
 
 .row{
-    background:#fff;
+    background:#eee;
     border-radius: 28px;
     box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.3);
     padding: 20px;
     transition: all .50s ease;
     text-align: center;
+}
+
+.row ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+
+.row ul li{
+    border-radius: 100vmax;
+    background-color: #2aa64f;
+    color: white;
+    padding: .5rem;
+    font-size: 14px;
+    margin: 5px auto;
 }
 
 .main-row{
