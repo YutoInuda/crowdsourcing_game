@@ -229,3 +229,14 @@ header .grass {
     color: #f00;
 }
 
+.hukidasi img{
+    position: absolute;
+    bottom: 20px;
+    left: 430px;
+    width: 250px;
+    height: 250px;
+}
+
+
+
+
