@@ -35,7 +35,7 @@ body{
   height: 100%;
   border-radius: 30% 70% 60% 40% / 30% 40% 60% 70%;
   animation: round_anime 5s linear infinite;
-  background-color: #03A9F4;
+  background-color: #0384f4;
 }
 @keyframes round_anime {
     0% { border-radius: 30% 70% 60% 40% / 30% 40% 60% 70%;}
@@ -69,7 +69,7 @@ body{
   height: 100%;
   border-radius: 30% 70% 60% 40% / 30% 40% 60% 70%;
   animation: round_anime 5s linear infinite;
-  background-color: #03A9F4;
+  background-color: #0384f4;
 }
 @keyframes round_anime {
     0% { border-radius: 30% 70% 60% 40% / 30% 40% 60% 70%;}
@@ -96,23 +96,23 @@ body{
 
 .circle1{
     background-color: green;
-    width: 630px;
-    height: 630px;
+    width: 900px;
+    height: 900px;
     margin: -315px 0 0 -315px;
 }
 
 .circle2{
     background-color: red;
-    width: 420px;
-    height: 420px;
+    width: 690px;
+    height: 690px;
     z-index: 1;
     margin: -220px 0 0 -220px;
 }
 
 .circle3{
     background-color: purple;
-    width: 200px;
-    height: 200px;
+    width: 470px;
+    height: 470px;
     z-index: 2;
     margin: -100px 0 0 -100px;
 }
@@ -132,6 +132,9 @@ body{
 .content{
     height: 100vh;
     width: 100%;
+    font-family: Chakra Petch;
+    font-style: italic;
+    font-weight: 1700;
     position: absolute;
     top: 0;
     left: 0;
@@ -144,7 +147,7 @@ body{
 }
 
 .content h1{
-    font-size: 6.5rem;
+    font-size: 7.5rem;
 }
 
 
