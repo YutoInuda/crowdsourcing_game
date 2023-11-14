@@ -193,7 +193,7 @@ header .grass {
 .imgScroll{
     position: absolute;
     left: 0;
-    bottom: 110px;
+    bottom: 120px;
     padding: 60px 0;
     width: 100%;
     display: flex;
