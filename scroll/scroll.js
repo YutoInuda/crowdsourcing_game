@@ -58,6 +58,44 @@ document.addEventListener('visibilitychange', function() {
                 }
             }, 90);
         }
+
+        function updateBackgroundImage(count) {
+            const bodyElement = document.body;
+        
+            if (count >= 0 && count < 100) {
+                bodyElement.style.backgroundImage = "url(../img/city0.png)";
+            } else if (count >= 100 && count < 200) {
+                bodyElement.style.backgroundImage = "url(../img/city1.png)";
+            } else if (count >= 200 && count < 300) {
+                bodyElement.style.backgroundImage = "url(../img/city2.png)";
+            }else if (count >= 300 && count < 400) {
+                bodyElement.style.backgroundImage = "url(../img/city3.png)";
+            } else if (count >= 400 && count < 500) {
+                bodyElement.style.backgroundImage = "url(../img/city4.png)";
+            }else if (count >= 500 && count < 600) {
+                bodyElement.style.backgroundImage = "url(../img/city5.png)";
+            } else if (count >= 600 && count < 700) {
+                bodyElement.style.backgroundImage = "url(../img/city6.png)";
+            }else if (count >= 700 && count < 800) {
+                bodyElement.style.backgroundImage = "url(../img/city7.png)";
+            } else if (count >= 800 && count < 900) {
+                bodyElement.style.backgroundImage = "url(../img/city8.png)";
+            }else if (count >= 900 && count < 1000) {
+                bodyElement.style.backgroundImage = "url(../img/city9.png)";
+            } else if (count >= 1000 && count < 1100) {
+                bodyElement.style.backgroundImage = "url(../img/city10.png)";
+            }else if (count >= 1100 && count < 1200) {
+                bodyElement.style.backgroundImage = "url(../img/city11.png)";
+            } else if (count >= 1200 && count < 1300) {
+                bodyElement.style.backgroundImage = "url(../img/city12.png)";
+            }else if (count >= 1300 && count < 1400) {
+                bodyElement.style.backgroundImage = "url(../img/city13.png)";
+            } else if (count >= 1400 && count < 1500) {
+                bodyElement.style.backgroundImage = "url(../img/city14.png)";
+            }else if (count >= 1500 && count < 1600) {
+                bodyElement.style.backgroundImage = "url(../img/city15.png)";
+            }
+        }
     
         
         function updateCitySize(count, citySizeElement) {

@@ -46,10 +46,10 @@
 body{
     overflow: hidden;
     transition: background-image 1.5s ease-in-out;
-    background-size: 1300px;
-    background-position: center top;
+    background-size: 650px;
+    background-position: center top -15px;
     background-repeat: no-repeat;
-    background-color: rgb(250, 250, 250);
+    background-color: #c6e4ef;
 
 }
 section{
