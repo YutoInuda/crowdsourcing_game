@@ -191,6 +191,14 @@ header .grass {
     font-size: 17px;
 }
 
+.hukidasi {
+    position: absolute;
+    bottom: 90px;
+    left: 470px;
+    width: 115px;
+    height: 90px;
+}
+
 /* navigation(home button etc.) */
 .navigation{
     position: absolute;
@@ -229,13 +237,7 @@ header .grass {
     color: #f00;
 }
 
-.hukidasi img{
-    position: absolute;
-    bottom: 20px;
-    left: 430px;
-    width: 250px;
-    height: 250px;
-}
+
 
 
 
