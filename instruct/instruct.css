@@ -80,7 +80,7 @@
     animation-timing-function: ease-in-out;
 }
 
-@keyframes animate {
+/* @keyframes animate {
     0%{
         background-image: url(../img/city0.png);
     }20%{
@@ -95,7 +95,7 @@
         background-image: url(../img/city5.png);
     }
     
-}
+} */
 
 .content .box:nth-child(3){
     background: linear-gradient(90deg, rgb(57, 190, 202), rgba(81, 99, 255, 1));
