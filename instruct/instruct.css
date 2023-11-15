@@ -89,7 +89,7 @@
     background-repeat: no-repeat;
     background-position: center top 50px;
     opacity: 0; /* 初期状態では透明 */
-    animation: fadeInOut 25s infinite linear; /* 各画像に14秒ずつ割り当てる */
+    animation: fadeInOut 15s infinite linear; 
   }
 
   @keyframes fadeInOut {
@@ -100,10 +100,10 @@
   
   /* 各背景画像に対して、フェードイン・アウトのタイミングをずらす */
   .background-image:nth-child(1) { animation-delay: 0s; }
-  .background-image:nth-child(2) { animation-delay: 5s; } /* 14秒後に2枚目がフェードイン */
-  .background-image:nth-child(3) { animation-delay: 10s; }
-  .background-image:nth-child(4) { animation-delay: 15s; }
-  .background-image:nth-child(5) { animation-delay: 20s; } /* 28秒後に3枚目が... */
+  .background-image:nth-child(2) { animation-delay: 3s; } /* 14秒後に2枚目がフェードイン */
+  .background-image:nth-child(3) { animation-delay: 6s; }
+  .background-image:nth-child(4) { animation-delay: 9s; }
+  .background-image:nth-child(5) { animation-delay: 12s; } /* 28秒後に3枚目が... */
   /* ... 各画像に対して適切な遅延を設定 */
 
 
