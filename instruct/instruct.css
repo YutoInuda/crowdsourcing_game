@@ -87,7 +87,7 @@
     height: 100%;
     background-size: 940px;
     background-repeat: no-repeat;
-    background-position: center top 125px;
+    background-position: center top 50px;
     opacity: 0; /* 初期状態では透明 */
     animation: fadeInOut 25s infinite linear; /* 各画像に14秒ずつ割り当てる */
   }
