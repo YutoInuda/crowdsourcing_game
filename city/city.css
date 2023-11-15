@@ -46,8 +46,8 @@
 body{
     overflow: hidden;
     transition: background-image 1.5s ease-in-out;
-    background-size: 1200px;
-    background-position: center top -35px;
+    background-size: 1100px;
+    background-position: center top -20px;
     background-repeat: no-repeat;
     background-color: #c6e4ef;
 }
