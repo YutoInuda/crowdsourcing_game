@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>instruction</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="instruct.css">
+</head>
+<body>
+    <div class="container">
+        <div class="tabs">
+            <input id="intro" type="radio" name="slider" checked>
+            <input id="score" type="radio" name="slider">
+            <input id="con" type="radio" name="slider">
+            <div class="buttons">
+                <label for="intro"></label>
+                <label for="score"></label>
+                <label for="con"></label>
+            </div>
+            <div class="content">
+                <div class="box intro">
+                    <div class="contentBx">
+                        <h2 class="typeing" data-speed="100">クラウドソーシングゲームとは、遊ぶことで社会課題の解決に貢献できるゲームです</h2>
+                        <div class="gazou">
+                            <img class="fadeIn" src="../img/ARTigo.png" alt="">
+                            <img class="fadeIn" src="../img/eterna.png" alt="">
+                            <img class="fadeIn" src="../img/stallcatchers.png" alt="">
+                        </div>
+                    </div>
+                </div>
+                <div class="box score">
+                    <div class="contentBx backgroundChanger">
+                        <h2 class="typeing" data-speed="100">この作品では、これらのゲームで遊ぶことで、ポイントを獲得し、仮想の社会を発展させてください</h2>
+                    </div>
+                </div>
+                <div class="box con">
+                    <div class="contentBx">
+                        <h3 class="typeing" data-speed="100">さあ、ゲームで「社会」を発展させよう</h2>
+                        <button onclick="location.href='../city/city.html'">Let's play</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="instruct.js"></script>
+</body>
+</html>
