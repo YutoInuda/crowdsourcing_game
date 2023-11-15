@@ -67,16 +67,7 @@
 }
 .content .box:nth-child(2){
     background: #87b3f0;
-    /* background-image:url('../img/city0.png'); */
-    /* background-size: 940px;
-    background-position: center top 125px;
-    background-repeat: no-repeat;
-
-    animation-name: animate;
-    animation-duration: 14s;
-    animation-fill-mode: backwards;
-    animation-iteration-count: infinite;
-    animation-timing-function: linear; */
+    
 }
 
 .background-image {
@@ -94,35 +85,16 @@
 
   @keyframes fadeInOut {
     0%, 17% { opacity: 0; }
-    20%, 37% { opacity: 1; } /* 最初の画像が表示される */
+    20%, 37% { opacity: 1; } 
     40%, 100% { opacity: 0; }
   }
   
-  /* 各背景画像に対して、フェードイン・アウトのタイミングをずらす */
   .background-image:nth-child(1) { animation-delay: 0s; }
-  .background-image:nth-child(2) { animation-delay: 3s; } /* 14秒後に2枚目がフェードイン */
+  .background-image:nth-child(2) { animation-delay: 3s; } 
   .background-image:nth-child(3) { animation-delay: 6s; }
   .background-image:nth-child(4) { animation-delay: 9s; }
-  .background-image:nth-child(5) { animation-delay: 12s; } /* 28秒後に3枚目が... */
-  /* ... 各画像に対して適切な遅延を設定 */
+  .background-image:nth-child(5) { animation-delay: 12s; } 
 
-
-/* @keyframes animate {
-    0%{
-        background-image: url(../img/city0.png);
-    }20%{
-        background-image: url(../img/city1.png);
-    }40%{
-        background-image: url(../img/city2.png);
-    }60%{
-        background-image: url(../img/city3.png);
-    }80%{
-        background-image: url(../img/city4.png);
-    }100%{
-        background-image: url(../img/city5.png);
-    }
-    
-} */
 
 .content .box:nth-child(3){
     background: linear-gradient(90deg, rgb(57, 190, 202), rgba(81, 99, 255, 1));
