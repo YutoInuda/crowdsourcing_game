@@ -71,7 +71,6 @@
     background-size: 940px;
     background-position: center top 125px;
     background-repeat: no-repeat;
-    transition: 2s;
 
     animation-name: animate;
     animation-duration: 14s;
