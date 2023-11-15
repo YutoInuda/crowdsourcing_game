@@ -127,14 +127,45 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
+    position: relative;
+    width: 200px;
+    height: 200px;
+    transform-style: preserve-3d;
+    animation: kaiten 30s linear infinite;
+}
+@keyframes kaiten {
+0%{
+    transform: perspective(1000px) rotateY(0deg);
+}    100%{
+    transform: perspective(1000px) rotateY(360deg);
+}
 }
 
-.content .box .contentBx .gazou img{
+.gazou span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i) * 45deg)) translateZ(400px);
+}
+
+.gazou span img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* .content .box .contentBx .gazou img{
     margin: 0 15px;
     margin-top: 70px;
     max-width: 355px;
-}
+} */
 
 .fadeIn{
 animation-name:fadeInAnime;
