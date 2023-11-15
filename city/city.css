@@ -47,7 +47,7 @@ body{
     overflow: hidden;
     transition: background-image 1.5s ease-in-out;
     background-size: 1100px;
-    background-position: center top -20px;
+    background-position: center top -25px;
     background-repeat: no-repeat;
     background-color: #c6e4ef;
 }
