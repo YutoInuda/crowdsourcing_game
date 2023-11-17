@@ -39,7 +39,8 @@
 
 .tabs input:nth-child(1):checked ~ .buttons label:nth-child(1),
 .tabs input:nth-child(2):checked ~ .buttons label:nth-child(2),
-.tabs input:nth-child(3):checked ~ .buttons label:nth-child(3){
+.tabs input:nth-child(3):checked ~ .buttons label:nth-child(3),
+.tabs input:nth-child(4):checked ~ .buttons label:nth-child(4){
     opacity: 1;
     width: 50px;
 }
@@ -66,20 +67,22 @@
     background: #87b3f0;
 }
 .content .box:nth-child(2){
+    background: #87b3f0;  
+}
+.content .box:nth-child(3){
     background: #87b3f0;
-    
 }
 
 .background-image {
     position: absolute;
-    top: 125px; /* 背景の上端からの位置 */
+    top: 125px; 
     left: 0;
     width: 100%;
     height: 100%;
     background-size: 940px;
     background-repeat: no-repeat;
     background-position: center top 20px;
-    opacity: 0; /* 初期状態では透明 */
+    opacity: 0; 
     animation: fadeInOut 15s infinite linear; 
   }
 
@@ -96,7 +99,7 @@
   .background-image:nth-child(5) { animation-delay: 12s; } 
 
 
-.content .box:nth-child(3){
+.content .box:nth-child(4){
     background: linear-gradient(90deg, rgb(57, 190, 202), rgba(81, 99, 255, 1));
 }
 
@@ -111,6 +114,9 @@
 .tabs input:nth-child(3):checked ~ .content{
     left: -200vw;
 }
+.tabs input:nth-child(4):checked ~ .content{
+    left: -300vw;
+}
 
 
 
@@ -121,6 +127,14 @@
     flex-direction: column;
     gap: 10px;
     z-index: 1000;
+}
+
+.intro .contentBx img{
+    position: absolute;
+    bottom: 60px;
+    left: 660px;
+    height: 100px;
+    width: 100px;
 }
 
 .content .box .contentBx .gazou{
@@ -161,11 +175,7 @@
     object-fit: cover;
 }
 
-/* .content .box .contentBx .gazou img{
-    margin: 0 15px;
-    margin-top: 70px;
-    max-width: 355px;
-} */
+
 
 .fadeIn{
 animation-name:fadeInAnime;
@@ -202,6 +212,13 @@ opacity:0;
     max-width: 800px;
 }
 
+.content .box .contentBx h4{
+    font-size: 3em;
+    color: #fff;
+    font-family: 'Noto Sans JP';
+    max-width: 800px;
+}
+
 
 .content .box .contentBx button{
     font-size: 1.2em;
@@ -221,6 +238,7 @@ opacity:0;
 .content .box .contentBx button:hover{
     letter-spacing: 0.2em;
 }
+
 
 
 
