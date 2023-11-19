@@ -93,17 +93,17 @@ document.addEventListener('visibilitychange', function() {
             } else if (count >= 1400 && count < 1500) {
                 bodyElement.style.backgroundImage = "url(../img/city14.png)";
             }else if (count >= 1500 && count < 1600) {
-                bodyElement.style.backgroundImage = "url(../img/city15.png)";
+                bodyElement.style.backgroundImage = "url(../img/city14.png)";
             }else if (count >= 1600 && count < 1700) {
-                bodyElement.style.backgroundImage = "url(../img/city15.png)";
+                bodyElement.style.backgroundImage = "url(../img/city14.png)";
             }else if (count >= 1700 && count < 1800) {
-                bodyElement.style.backgroundImage = "url(../img/city15.png)";
+                bodyElement.style.backgroundImage = "url(../img/city14.png)";
             }else if (count >= 1800 && count < 1900) {
-                bodyElement.style.backgroundImage = "url(../img/city15.png)";
+                bodyElement.style.backgroundImage = "url(../img/city14.png)";
             }else if (count >= 1900 && count < 2000) {
-                bodyElement.style.backgroundImage = "url(../img/city15.png)";
+                bodyElement.style.backgroundImage = "url(../img/city14.png)";
             }else if (count >= 2000 && count < 2100) {
-                bodyElement.style.backgroundImage = "url(../img/city15.png)";
+                bodyElement.style.backgroundImage = "url(../img/city14.png)";
             }
         }
         
