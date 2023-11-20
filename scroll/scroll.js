@@ -18,7 +18,7 @@ document.addEventListener('visibilitychange', function() {
     const lastClicked = parseInt(localStorage.getItem('lastClicked'), 10);
     const now = new Date().getTime();
 // ここの秒数を変更する
-    if (!document.hidden && localStorage.getItem('clicked') && now - lastClicked >= 60000) {
+    if (!document.hidden && localStorage.getItem('clicked') && now - lastClicked >= 6000) {
         incrementCounter();
         progressBar.update();
         localStorage.removeItem('clicked'); // Remove the clicked event after triggering the increment
@@ -141,6 +141,16 @@ document.addEventListener('visibilitychange', function() {
                 citySizeElement.innerText = 'Lv.14 ゲーム社会';
             }else if (count >= 1500 && count < 1600) {
                 citySizeElement.innerText = 'Lv.15 ゲーム社会';
+            }else if (count >= 1600 && count < 1700) {
+                citySizeElement.innerText = 'Lv.16 ゲーム社会';
+            } else if (count >= 1700 && count < 1800) {
+                citySizeElement.innerText = 'Lv.17 ゲーム社会';
+            }else if (count >= 1800 && count < 1900) {
+                citySizeElement.innerText = 'Lv.18 ゲーム社会';
+            } else if (count >= 1900 && count < 2000) {
+                citySizeElement.innerText = 'Lv.19 ゲーム社会';
+            }else if (count >= 2000 && count < 2100) {
+                citySizeElement.innerText = 'Lv.20 ゲーム社会';
             }
             updateBackgroundImage(count);
         }

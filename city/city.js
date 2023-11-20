@@ -140,6 +140,16 @@ document.addEventListener('visibilitychange', function() {
                 citySizeElement.innerText = 'Lv.14 ゲーム社会';
             }else if (count >= 1500 && count < 1600) {
                 citySizeElement.innerText = 'Lv.15 ゲーム社会';
+            }else if (count >= 1600 && count < 1700) {
+                citySizeElement.innerText = 'Lv.16 ゲーム社会';
+            } else if (count >= 1700 && count < 1800) {
+                citySizeElement.innerText = 'Lv.17 ゲーム社会';
+            }else if (count >= 1800 && count < 1900) {
+                citySizeElement.innerText = 'Lv.18 ゲーム社会';
+            } else if (count >= 1900 && count < 2000) {
+                citySizeElement.innerText = 'Lv.19 ゲーム社会';
+            }else if (count >= 2000 && count < 2100) {
+                citySizeElement.innerText = 'Lv.20 ゲーム社会';
             }
             updateBackgroundImage(count);
         }
