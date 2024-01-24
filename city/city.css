@@ -76,10 +76,12 @@ header{
     align-items: center;
 }
 
+
 header .logo img{
     position: relative;
-    max-width: 40px;
+    max-width: 65px;
     margin-bottom: 150px;
+    z-index: 100;
 }
 
 /* cloud */
