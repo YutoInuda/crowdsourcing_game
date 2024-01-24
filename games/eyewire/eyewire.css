@@ -397,4 +397,10 @@ section  .active .dataBx .imgBx{
     section .container .user .instBx{
         width: 100%;
     }
+    section .container .overviewBx h2{
+        padding: 0 20px;
+    }
+    section .container .overviewBx p{
+        padding: 0 20px;
+    }
 }
