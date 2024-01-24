@@ -94,6 +94,8 @@ document.addEventListener('visibilitychange', function() {
                 bodyElement.style.backgroundImage = "url(../img/city14.png)";
             }else if (count >= 1500 && count < 1600) {
                 bodyElement.style.backgroundImage = "url(../img/city15.png)";
+            }else if (count >= 1600 && count < 99999) {
+                bodyElement.style.backgroundImage = "url(../img/city15.png)";
             }
         }
         
@@ -130,6 +132,8 @@ document.addEventListener('visibilitychange', function() {
                 citySizeElement.innerText = 'Lv.14 ゲーム社会';
             }else if (count >= 1500 && count < 1600) {
                 citySizeElement.innerText = 'Lv.15 ゲーム社会';
+            }else if (count >= 1600 && count < 99999) {
+                citySizeElement.innerText = 'Lv.Max ゲーム社会';
             }
             updateBackgroundImage(count);
         }
