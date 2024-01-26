@@ -18,7 +18,7 @@ document.addEventListener('visibilitychange', function() {
     const lastClicked = parseInt(localStorage.getItem('lastClicked'), 10);
     const now = new Date().getTime();
 // ここの秒数を変更する
-    if (!document.hidden && localStorage.getItem('clicked') && now - lastClicked >= 90000) {
+    if (!document.hidden && localStorage.getItem('clicked') && now - lastClicked >= 60000) {
         incrementCounter();
         progressBar.update();
         localStorage.removeItem('clicked'); // Remove the clicked event after triggering the increment
