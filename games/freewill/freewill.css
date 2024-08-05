@@ -1,0 +1,399 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*load  */
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #fff;
+}
+
+.loader svg{
+    width: 100px;
+    height: 100px;
+}
+
+.loader svg rect{
+    width: 100px;
+    height: 100px;
+    fill: none;
+    stroke-width: 100px;
+    stroke: #00adff;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 50%;
+    animation: rotateBox 2s linear infinite;
+}
+@keyframes rotateBox {
+    to{
+        stroke-dashoffset: 250%;
+    }
+}
+
+.loaded{
+    opacity: 0;
+    min-height: 0;
+    height: 0;
+    transition: all 0.7s;
+}
+
+.content{
+    visibility: hidden;
+    transition: visibility 3s;
+    transition-delay: 0.3s;
+}
+
+
+/* content */
+body{
+    overflow: hidden;
+}
+
+section{
+    position: relative;
+    min-height: 100vh;
+    background:  linear-gradient(90deg, rgb(57, 190, 202), rgba(81, 99, 255, 1));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+section .container{
+    position: relative;
+    width: 1000px;
+    height: 600px;
+    background: #fff;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+section .container .user{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+section .container .user .imgBx{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: #000000;
+    transition: 0.5s;
+}
+
+section .container .user .imgBx img{
+    position: absolute;
+    top: 12%;
+    left: 3%;
+    width: 92%;
+    height: auto;
+    object-fit: cover;
+}
+
+section .container .user .imgBx .gameView{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* いじるのはここから */
+section .container .user .instBx{
+    position: relative;
+    width: 50%;
+    height: 100%;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+    padding: 40px;
+    transition: 0.5s;
+}
+
+section .container .user .instBx ul{
+    width: 450px;
+    margin-top: 40px;
+    /* ここいじる */
+    margin-left: 55px;
+    list-style: none;
+
+}
+
+section .container .user .instBx ul li{
+    padding: 10px 20px;
+    margin: 20px 0;
+    font-family: 'Noto Sans JP';
+    font-weight: 500;
+}
+
+/* ここいじる */
+section .container .user .instBx ul li span:nth-child(1){
+    display: inline-block;
+    width: 110px;
+    font-size: 18px;
+}
+
+section .container .user .instBx ul li span:nth-child(2){
+    display: inline-block;
+    width: 290px;
+    font-size: 18px;
+}
+
+
+section .container .user .instBx  h1{
+    font-size: 35px;
+    font-family: 'Righteous';
+    font-weight: 800;
+    text-transform: none;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 12%;
+    color: #677eff;
+}
+
+section .container .user .instBx .tent{
+    width: 400px;
+}
+
+section .container .user .instBx h2{
+    font-size: 22px;
+    font-family: 'Noto Sans JP';
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 2px;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+section .container .user .instBx p{
+    font-size: 17px;
+    font-family: 'Noto Sans JP';
+    font-weight: 400;
+}
+
+section .container .overviewBx{
+    pointer-events: none;
+}
+
+section  .active .overviewBx{
+    pointer-events: initial;
+}
+
+section .container .overviewBx .instBx{
+    left: 100%;
+}
+
+section  .active .overviewBx .instBx{
+    left: 0;
+}
+
+section .container .overviewBx .imgBx{
+    left: -100%;
+}
+
+section  .active .overviewBx .imgBx{
+    left: 0;
+}
+
+
+/*  */
+section .container .dataBx .instBx{
+    left: 0;
+}
+
+section  .active .dataBx .instBx{
+    left: 100%;
+}
+
+section .container .dataBx .imgBx{
+    left: 0;
+}
+
+section  .active .dataBx .imgBx{
+    left: -100%;
+}
+
+
+/* ボタン */
+.btMain{
+    display: flex;
+    justify-content: center;
+}
+
+
+.btMain button{
+    font-size: 1.2em;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    background: #677eff;
+    color: #fff;
+    letter-spacing: 0.05em;
+    margin-top: 10px;
+    font-weight: 600;
+    border: none;
+    border-radius: 40px;
+    transition: 0.5s;
+    margin-top: 55px;
+    margin-right: 50px;
+    /* margin: 50px 12px; */
+}
+
+.btMain button:hover{
+    letter-spacing: 0.2em;
+}
+
+
+/* back */
+.back{
+    position: absolute;
+    bottom:0;
+    right: 2%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+}
+
+.back li{
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #262626;
+    transition: .5s;
+}
+
+.back li:hover{
+    background: #677eff;
+    border: none;
+}
+
+.back li span{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translateY(-50%) rotate(-45deg);
+    width: 20px;
+    height: 20px;
+    border: 4px solid #262626;
+    border-right: none;
+    border-bottom: none;
+    transition: .5s;
+}
+
+.back li span::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    transform-origin: left;
+    transform: rotate(45deg) translate(-2px, -1px) scale(0);
+    transition: .5s;
+}
+
+.back li:hover span{
+    left: 28%;
+    border-color: #fff;
+}
+
+.back li:hover span::before{
+    transform: rotate(45deg) translate(-2px, -1px) scale(1);
+}
+
+
+
+/* next */
+.next{
+    position: absolute;
+    bottom:0;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    padding: 0;
+}
+
+.next li{
+    list-style: none;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #262626;
+    transition: .5s;
+}
+
+.next li:hover{
+    background: #677eff;
+    border: none;
+}
+
+.next li span{
+    position: absolute;
+    top: 50%;
+    right: 40%;
+    transform: translateY(-50%) rotate(-45deg);
+    width: 20px;
+    height: 20px;
+    border: 4px solid #262626;
+    border-left: none;
+    border-top: none;
+    transition: .5s;
+}
+
+.next li span::before{
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background: #fff;
+    transform-origin: right;
+    transform: rotate(45deg) translate(0px, 20px) scale(0);
+    transition: .5s;
+}
+
+.next li:hover span{
+    right: 28%;
+    border-color: #fff;
+}
+
+.next li:hover span::before{
+    transform: rotate(45deg) translate(0px, 20px) scale(1);
+}
+
+
+
+@media(max-width:991px){
+    section .container{
+        max-width: 400px;
+    }
+    section .container .imgBx{
+        display: none;
+    }
+    section .container .user .instBx{
+        width: 100%;
+    }
+    section .container .overviewBx h2{
+        padding: 0 20px;
+    }
+    section .container .overviewBx p{
+        padding: 0 20px;
+    }
+}
