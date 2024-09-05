@@ -40,6 +40,38 @@ document.addEventListener('visibilitychange', function() {
                 localStorage.setItem('lastClicked', new Date().getTime()); // Record the time of the click
             });
         });
+
+        // レベルアップ画像の表示
+        function showLevelImage(count) {
+            const level = Math.floor(count / 100); // 百の位を取得
+            const imageUrl = `../img/Lv${level} Meta.png`; // 画像URLを作成
+
+            setTimeout(() => {
+                // 画像要素を作成
+                const imageElement = document.createElement('img');
+                imageElement.src = imageUrl;
+                imageElement.style.position = 'fixed';
+                imageElement.style.top = '50%';
+                imageElement.style.left = '50%';
+                imageElement.style.transform = 'translate(-50%, -50%)';
+                imageElement.style.zIndex = '1000'; // 他の要素より前に表示
+                imageElement.style.width = '650px'; // 画像の幅を指定（必要に応じて変更）
+                imageElement.style.height = 'auto';
+        
+                // 画像を画面に追加
+                document.body.appendChild(imageElement);
+        
+                // 次にクリックされたときに画像を削除
+                const removeImageOnClick = () => {
+                    document.body.removeChild(imageElement);
+                    document.removeEventListener('click', removeImageOnClick); // イベントリスナーを削除
+                };
+        
+                // クリックイベントリスナーを追加
+                document.addEventListener('click', removeImageOnClick);
+            }, 1500); // 1.5秒後に実行
+        }
+
         
         function incrementCounter() {
             const counterElement = document.getElementById('counter');
@@ -53,6 +85,10 @@ document.addEventListener('visibilitychange', function() {
                     counterElement.innerText = currentCount ;
                     localStorage.setItem('counter', currentCount);
                     updateCitySize(currentCount, citySizeElement);
+                    // 100の倍数の場合に画像を表示
+                    if (currentCount % 100 === 0) {
+                    showLevelImage(currentCount);
+                    }
                 } else {
                     clearInterval(intervalId);
                 }

@@ -156,12 +156,21 @@ header .grass {
     position: absolute;
     bottom: 70px;
     display: flex;
-    gap: 30px;
+    gap: 40px;
 }
 
 .navigation li{
     position: relative;
     list-style: none;
+    text-align: center;
+    font-family: Trebuchet MS, sans-serif;
+    font-weight:600;
+    color: #3f3f3f;
+}
+
+.navigation li p{
+    font-size: 13px;
+    padding-top: 4px;
 }
 
 .navigation li a{
@@ -194,7 +203,7 @@ header .grass {
     position: absolute;
     left: 0;
     bottom: 120px;
-    padding: 60px 0;
+    padding: 70px 0;
     width: 100%;
     display: flex;
     overflow-x: hidden;
