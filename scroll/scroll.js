@@ -45,6 +45,7 @@ document.addEventListener('visibilitychange', function() {
         function showLevelImage(count) {
             const level = Math.floor(count / 100); // 百の位を取得
             const imageUrl = `../img/Lv${level} Meta.png`; // 画像URLを作成
+            const audioUrl = '../music/レベルアップ.mp3';
 
             setTimeout(() => {
                 // 画像要素を作成
@@ -60,6 +61,9 @@ document.addEventListener('visibilitychange', function() {
         
                 // 画像を画面に追加
                 document.body.appendChild(imageElement);
+
+                const audio = new Audio(audioUrl);
+                audio.play();
         
                 // 次にクリックされたときに画像を削除
                 const removeImageOnClick = () => {
@@ -197,6 +201,7 @@ document.addEventListener('visibilitychange', function() {
 function manageProgress() {
     const progressElement = document.getElementById('progress');
     const progressStatusElement = document.getElementById('progress-status');
+    const audioUrl = '../music/パワーアップ１.mp3';
 
     return {
         load: function() {
@@ -221,6 +226,10 @@ function manageProgress() {
                     width += 1;
                     this.updateUI(width);
                     localStorage.setItem('progress', width); // Save the progress to localStorage
+
+                    // 音声を再生
+                    const audio = new Audio(audioUrl);
+                    audio.play();
 
                     if (width >= 100) {
                         clearInterval(interval);
